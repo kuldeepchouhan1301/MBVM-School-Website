@@ -1,0 +1,41 @@
+{
+  "name": "sms-frontend",
+  "version": "1.0.0",
+  "description": "school management system frontend website",
+  "main": "index.js",
+  "scripts": {
+    "build": "set NODE_ENV=production && webpack --mode production",
+    "dev": "set NODE_ENV=development && webpack-dev-server --mode development --open",
+    "watch": "npm run dev -- --watch"
+  },
+  "keywords": [
+    "school",
+    "college",
+    "admission",
+    "about",
+    "contact",
+    "events"
+  ],
+  "author": "H.R.Shadhin",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "img-loader": "^2.0.1",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "sass": "^1.99.0",
+    "sass-loader": "^10.5.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.47.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
+  },
+  "dependencies": {
+    "jquery": "^1.11.3",
+    "popper.js": "^1.14.3"
+  }
+}
