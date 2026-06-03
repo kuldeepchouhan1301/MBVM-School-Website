@@ -31,12 +31,6 @@ CREATE TABLE IF NOT EXISTS admission_enquiries (
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-ALTER TABLE admission_enquiries
-  ADD COLUMN IF NOT EXISTS id_card VARCHAR(255) NOT NULL AFTER nationality;
-
-ALTER TABLE admission_enquiries
-  DROP COLUMN IF EXISTS photo;
-
 CREATE TABLE IF NOT EXISTS student_results (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   student_name VARCHAR(160) NOT NULL,

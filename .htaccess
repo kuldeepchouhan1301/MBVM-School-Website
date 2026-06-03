@@ -11,6 +11,8 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^frontend/(.*)$ src/$1 [L]
+
 RewriteRule ^events/?$ events.php [L]
 RewriteRule ^gallery/?$ gallery.php [L]
 RewriteRule ^results/?$ results.php [L]

@@ -20,8 +20,40 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ]);
     $pdo->exec($schema);
+    mbvm_apply_migrations($pdo);
     echo "Database setup completed.\n";
 } catch (Throwable $error) {
     http_response_code(500);
     echo "Database setup failed: " . $error->getMessage() . "\n";
+}
+
+function mbvm_apply_migrations(PDO $pdo): void
+{
+    $database = getenv('MBVM_DB_NAME') ?: MBVM_DB_NAME;
+    $pdo->exec('USE `' . str_replace('`', '``', $database) . '`');
+
+    if (!mbvm_column_exists($pdo, 'admission_enquiries', 'id_card')) {
+        $pdo->exec('ALTER TABLE admission_enquiries ADD COLUMN id_card VARCHAR(255) NOT NULL AFTER nationality');
+    }
+
+    if (mbvm_column_exists($pdo, 'admission_enquiries', 'photo')) {
+        $pdo->exec('ALTER TABLE admission_enquiries DROP COLUMN photo');
+    }
+}
+
+function mbvm_column_exists(PDO $pdo, string $table, string $column): bool
+{
+    $stmt = $pdo->prepare(
+        'SELECT COUNT(*)
+         FROM INFORMATION_SCHEMA.COLUMNS
+         WHERE TABLE_SCHEMA = DATABASE()
+           AND TABLE_NAME = :table_name
+           AND COLUMN_NAME = :column_name'
+    );
+    $stmt->execute([
+        'table_name' => $table,
+        'column_name' => $column,
+    ]);
+
+    return (int) $stmt->fetchColumn() > 0;
 }

@@ -795,7 +795,7 @@ function mbvm_verify_admin_password(string $password): bool
 function mbvm_require_admin(): void
 {
     if (empty($_SESSION['mbvm_admin'])) {
-        header('Location: login.html');
+        header('Location: /login.html');
         exit;
     }
 }

@@ -79,6 +79,14 @@ module.exports = {
         to: path.resolve(__dirname, 'frontend/fonts'),
       },
       {
+        from: path.resolve(__dirname, 'src/css/modern.css'),
+        to: path.resolve(__dirname, 'frontend/css/modern.css'),
+      },
+      {
+        from: path.resolve(__dirname, 'src/libs/contact-actions.js'),
+        to: path.resolve(__dirname, 'frontend/js/contact-actions.js'),
+      },
+      {
         from: path.resolve(__dirname, 'src/rs-plugin'),
         to: path.resolve(__dirname, 'frontend/rs-plugin'),
       },

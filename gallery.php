@@ -132,26 +132,81 @@ try {
     </div>
 
     <footer>
-        <div class="grid-row">
-            <div class="grid-col-row clear-fix">
-                <section class="grid-col grid-col-6 footer-about">
-                    <h2 class="corner-radius">About Us</h2>
-                    <p>MADHUSUDAN BAL VIDYA MANDIR MUNGTHALA was established in 2004 and it is managed by the Pvt. Unaided.</p>
-                </section>
-                <section class="grid-col grid-col-6 footer-links">
-                    <h2 class="corner-radius">Help Links <i class="site"></i></h2>
-                    <ul class="clear-fix">
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="admission.html">Admission</a></li>
-                        <li><a href="results.php">Results</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                        <li><a href="gallery.php">Gallery</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </footer>
+		<div class="grid-row">
+			<div class="grid-col-row clear-fix">
+				<section class="grid-col grid-col-6 footer-about">
+					<h2 class="corner-radius">About Us</h2>
+					<div>
+						<p>MADHUSUDAN BAL VIDYA MANDIR MUNGTHALA was established in 2004 and it is managed by the Pvt. Unaided.
+							It is located at Rural area of  ABU-ROAD block of SIROHI district of Rajasthan. 
+							The school consists of Grades from Nursary to 10. The school is Co-educational and it have an attached pre-primary section.
+							The school is Non-Ashram type (Govt.) in nature and is not using school building as a shift-school. 
+							Hindi is the medium of instructions in this school. This school is approachable by all weather road. 
+							In this school academic session starts in April.
+         					</p>
+					</div>
+					<address>
+						<p></p>
+						<a href="tel:+919982754110" class="phone-number">+91 9982754110</a>
+						<br />
+						<a href="mailto:mbvm.mungthala1@gmail.com" class="email">
+							<span class="">mbvm.mungthala1@gmail.com</span>
+						</a>
+						
+
+						<br>
+						<a href="contact-us.html" class="address">Mungthala Bus Stand
+							<br/>Abu-Road Rajasthan</a>
+						</br>
+					</address>
+
+				</section>
+				
+				<section class="grid-col grid-col-6 footer-links">
+					<h2 class="corner-radius">Help Links
+						<i class="site"></i>
+					</h2>
+					<ul class="clear-fix">
+						<li>
+							<a href="faq.html">FAQ</a>
+						</li>
+						<li>
+							<a href="admission.html">Admission</a>
+						</li>
+						<li>
+							<a href="results.php">Results</a>
+						</li>
+						<li>
+							<a href="timeline.html">Timeline</a>
+
+						</li>
+						<li>
+							<a href="gallery.php">Gallery</a>
+						</li>
+
+						<li>
+							<a href="contact-us.html">Contact Us</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="grid-row clear-fix">
+				<div class="copyright">Madhusudan Bal Vidya Mandir
+					<span></span> 2026 All Rights Reserved
+				</div>
+
+				<div class="footer-social">
+					<a href="https://www.youtube.com/@hindimid.mbvmschoolmoongth834/" class="fa fa-youtube"></a>
+				</div>
+
+				<div class="maintainedby">Maintained by
+					<a href="https://www.linkedin.com/in/kuldeepchouhan1301/" class="site">kuldeep Chouhan</a>
+				</div>
+			</div>
+		</div>
+	</footer>
     <script src="/frontend/js/libs.js"></script>
 </body>
 

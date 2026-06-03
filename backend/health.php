@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/bootstrap.php';
 mbvm_require_admin();
+mbvm_ensure_storage();
 
 $checks = [
     'php_version' => [
