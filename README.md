@@ -27,6 +27,20 @@ Dynamic pages:
     http://localhost:8000/dashboard.php
     http://localhost:8000/backend/health.php
 
+# Gallery image size
+
+The gallery page displays photos in a 4:3 card ratio. Keep gallery uploads close to this ratio so images do not crop important content.
+
+Recommended gallery image sizes:
+
+    Best: 1200 x 900 px
+    Also good: 1600 x 1200 px
+    Minimum: 800 x 600 px
+
+Avoid uploading very large phone/camera originals directly. Keep each gallery image ideally under 800 KB, and never above 2 MB unless it is truly needed. Large files such as 10 MB to 25 MB photos will slow down hosting, page load, and backups.
+
+Use JPG or WebP for gallery photos. PNG should only be used for graphics or screenshots.
+
 # PHP backend
 
 The backend is in `backend/`.
