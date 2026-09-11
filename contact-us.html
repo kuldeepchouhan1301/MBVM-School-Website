@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>MBVM | Contact Us — Get in Touch</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Contact Madhusudan Bal Vidya Mandir Mungthala for admissions, enquiries, location, and school information.">
+    <meta name="keywords" content="contact, address, phone, email, MBVM, Mungthala, Abu Road, Sirohi, Rajasthan">
+    <meta name="author" content="Kuldeep Chouhan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="frontend/img/favicon.png">
+    <link rel="stylesheet" href="frontend/css/libs.css">
+    <link rel="stylesheet" href="frontend/css/modern.css">
+</head>
+
+<body>
+
+	<!-- Top Information Bar -->
+	<div class="top-bar">
+		<div class="header-container top-bar-inner">
+			<div class="top-bar-contact">
+				<a href="tel:+919982754110"><i class="fa fa-phone"></i> +91 9982754110</a>
+				<a href="mailto:mbvm.mungthala1@gmail.com"><i class="fa fa-envelope-o"></i> mbvm.mungthala1@gmail.com</a>
+			</div>
+			<div class="top-bar-links">
+				<a href="https://www.youtube.com/@hindimid.mbvmschoolmoongth834/" target="_blank" rel="noopener" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+				<div class="lang-dropdown">
+					<i class="fa fa-globe"></i> EN <i class="fa fa-angle-down" style="font-size: 0.75rem;"></i>
+				</div>
+				<a href="login.html" title="Admin Login"><i class="fa fa-user"></i> Login</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navigation Header -->
+	<header class="main-header">
+		<div class="header-container main-header-inner">
+			<a href="index.html" class="brand-logo-wrap">
+				<img src="frontend/img/logo.png" alt="MBVM Logo">
+				<div>
+					<div class="brand-title">Madhusudan Bal Vidya Mandir</div>
+					<div class="brand-subtitle">Mungthala, Abu Road</div>
+				</div>
+			</a>
+
+			<nav class="main-nav" id="mainNav">
+				<a href="index.html">Home</a>
+				<a href="class.html">Classes</a>
+				<a href="teachers.php">Teachers</a>
+				<a href="events.php">Events</a>
+				<a href="gallery.php">Gallery</a>
+				<a href="results.php">Results</a>
+				<a href="faq.html">FAQ</a>
+				<a href="timeline.html">Timeline</a>
+				<a href="contact-us.html" class="active">Contact Us</a>
+				<a href="admission.html" class="btn-primary" style="margin-left: 0.5rem;">Apply Now</a>
+			</nav>
+
+			<button class="mobile-nav-toggle" id="navToggle" aria-label="Toggle navigation">
+				<i class="fa fa-bars" style="font-size: 1.25rem;"></i>
+			</button>
+		</div>
+	</header>
+
+    <!-- Contact Page Main Content -->
+    <main class="contact-page-wrap">
+        <div class="contact-container">
+
+            <!-- Page Header Header -->
+            <div class="contact-header">
+                <span class="contact-eyebrow">Get In Touch</span>
+                <h1 class="contact-title">Contact <span>MBVM School</span></h1>
+                <p class="contact-header-desc">
+                    We are always here to help. Reach out to us for admissions, campus visits, or general enquiries.
+                </p>
+            </div>
+
+            <!-- Top Contact Info Cards (4 Columns) -->
+            <div class="contact-info-grid">
+                <!-- Phone Card -->
+                <div class="contact-info-card">
+                    <div class="contact-info-badge">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact-info-label">Call Us</div>
+                    <div class="contact-info-value">
+                        <a href="tel:+919982754110">+91 9982754110</a>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-info-card">
+                    <div class="contact-info-badge">
+                        <i class="fa fa-envelope-o"></i>
+                    </div>
+                    <div class="contact-info-label">Email Us</div>
+                    <div class="contact-info-value">
+                        <a href="mailto:mbvm.mungthala1@gmail.com">mbvm.mungthala1@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- Address Card -->
+                <div class="contact-info-card">
+                    <div class="contact-info-badge">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="contact-info-label">Visit Us</div>
+                    <div class="contact-info-value">
+                        Mungthala Bus Stand, Abu Road, Sirohi District, Rajasthan
+                    </div>
+                </div>
+
+                <!-- Office Hours Card -->
+                <div class="contact-info-card">
+                    <div class="contact-info-badge">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="contact-info-label">Office Hours</div>
+                    <div class="contact-info-value">
+                        Mon – Sat: 8:00 AM – 3:30 PM<br><small style="color: var(--mbvm-muted);">Sunday: Closed</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Grid: Left Form Card, Right Sidebar Map & Details -->
+            <div class="contact-main-grid">
+                
+                <!-- Left: Contact Form Card -->
+                <div class="contact-form-card">
+                    <h2 class="contact-form-title">Send Us a Message</h2>
+                    <p class="contact-form-subtitle">Have a question or enquiry? Fill out the form below and our team will get back to you promptly.</p>
+                    
+                    <div class="email_server_responce"></div>
+                    
+                    <form action="backend/contact.php" method="post" class="contact-form" data-ajax="true">
+                        <input type="text" name="website" value="" style="display:none" tabindex="-1" autocomplete="off">
+                        <input type="hidden" name="ajax" value="1">
+                        
+                        <div class="contact-form-group">
+                            <label class="contact-field-label">
+                                Your Full Name <span class="req">*</span>
+                            </label>
+                            <div class="contact-input-wrap">
+                                <i class="fa fa-user field-icon"></i>
+                                <input type="text" name="name" class="contact-input-control" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label class="contact-field-label">
+                                Email Address <span class="req">*</span>
+                            </label>
+                            <div class="contact-input-wrap">
+                                <i class="fa fa-envelope-o field-icon"></i>
+                                <input type="email" name="email" class="contact-input-control" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label class="contact-field-label">
+                                Subject <span class="req">*</span>
+                            </label>
+                            <div class="contact-input-wrap">
+                                <i class="fa fa-tag field-icon"></i>
+                                <input type="text" name="subject" class="contact-input-control" placeholder="e.g. Admission Enquiry for Class 5" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label class="contact-field-label">
+                                Message <span class="req">*</span>
+                            </label>
+                            <div class="contact-input-wrap textarea-wrap">
+                                <i class="fa fa-commenting-o field-icon"></i>
+                                <textarea name="message" class="contact-input-control" placeholder="Write your message or question here..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-contact-submit">
+                            <i class="fa fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Sidebar (Map + School Location Details + Quick Action Buttons) -->
+                <div class="contact-sidebar">
+                    
+                    <!-- Location & Quick Actions Card -->
+                    <div class="contact-location-card">
+                        <h3 class="contact-location-title">
+                            <i class="fa fa-building-o" style="color: var(--mbvm-blue);"></i> School Campus
+                        </h3>
+                        <p class="contact-location-desc">
+                            Madhusudan Bal Vidya Mandir is conveniently located near Mungthala Bus Stand, Abu Road. Visit us for campus tours and direct enquiries.
+                        </p>
+
+                        <div class="contact-quick-actions">
+                            <a href="tel:+919982754110" class="btn-quick-action">
+                                <i class="fa fa-phone"></i> Call Now
+                            </a>
+                            <a href="mailto:mbvm.mungthala1@gmail.com" class="btn-quick-action">
+                                <i class="fa fa-envelope-o"></i> Email Us
+                            </a>
+                            <a href="https://maps.google.com/?q=Madhusudan+Bal+Vidya+Mandir+Mungthala" target="_blank" rel="noopener" class="btn-quick-action">
+                                <i class="fa fa-map-marker"></i> Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Map Card -->
+                    <div class="contact-map-card">
+                        <div class="contact-map-iframe-wrap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13101.138169214215!2d72.7217768032506!3d24.49889009189171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395d2971aa2f7b49%3A0xe2b310e17992b002!2sMadhusudan%20Bal%20Vidya%20Mandir(Moongthala)!5e0!3m2!1sen!2sin!4v1779416681160!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA Banner -->
+            <div class="contact-bottom-cta">
+                <div class="contact-cta-text">
+                    <h3>Ready to Join MBVM School?</h3>
+                    <p>Admissions are open for Nursery to Class 10th for the 2026–2027 academic session.</p>
+                </div>
+                <div class="contact-cta-buttons">
+                    <a href="tel:+919982754110" class="btn-cta-phone">
+                        <i class="fa fa-phone"></i> +91 9982754110
+                    </a>
+                    <a href="admission.html" class="btn-cta-apply">
+                        <i class="fa fa-pencil-square-o"></i> Apply Online
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+				<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-grid">
+				<!-- Brand & Contact Info Column -->
+				<div class="footer-col-brand">
+					<div class="footer-brand-header">
+						<div class="footer-logo-circle">
+							<img src="frontend/img/logo.png" alt="MBVM Logo">
+						</div>
+						<div class="footer-brand-title-wrap">
+							<div class="footer-brand-name">Madhusudan Bal Vidya Mandir</div>
+							<div class="footer-brand-sub">Mungthala, Abu Road</div>
+						</div>
+					</div>
+					<p class="footer-brand-desc">Established in 2004, MBVM is a Hindi-medium school offering quality education from Nursery to Class 10 in the rural area of Abu Road, Sirohi District, Rajasthan. We are committed to nurturing every child's potential with values, discipline, and academic excellence.</p>
+					<div class="footer-contact-list">
+						<a href="tel:+919982754110" class="footer-contact-item">
+							<i class="fa fa-phone"></i>
+							<span>+91 9982754110</span>
+						</a>
+						<a href="mailto:mbvm.mungthala1@gmail.com" class="footer-contact-item">
+							<i class="fa fa-envelope-o"></i>
+							<span>mbvm.mungthala1@gmail.com</span>
+						</a>
+						<div class="footer-contact-item">
+							<i class="fa fa-map-marker"></i>
+							<span>Mungthala Bus Stand, Abu Road, Rajasthan</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Help Links Column (2-Column Grid) -->
+				<div class="footer-col-links">
+					<h3 class="footer-heading">Help Links</h3>
+					<ul class="footer-links-grid">
+						<li><a href="faq.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> FAQ</a></li>
+						<li><a href="admission.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Admission</a></li>
+						<li><a href="results.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Results</a></li>
+						<li><a href="timeline.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Timeline</a></li>
+						<li><a href="gallery.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Gallery</a></li>
+						<li><a href="teachers.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Teachers</a></li>
+						<li><a href="events.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Events</a></li>
+						<li><a href="contact-us.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Contact Us</a></li>
+					</ul>
+				</div>
+
+				<!-- Key Achievement Column -->
+				<div class="footer-col-achievement">
+					<div class="footer-achievement-card">
+						<div class="footer-achievement-title">
+							<i class="fa fa-trophy"></i> Key Achievement
+						</div>
+						<div class="footer-achievement-desc">
+							50+ students secured JNV admission by 2025–26 — highest in the district
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bottom Footer Row -->
+			<div class="footer-bottom">
+				<div class="footer-copyright">
+					© 2026 Madhusudan Bal Vidya Mandir Mungthala. All rights reserved.
+				</div>
+				<div class="footer-maintained">
+					Maintained by <a href="https://www.linkedin.com/in/kuldeepchouhan1301/" target="_blank" rel="noopener">Kuldeep Chouhan</a>
+				</div>
+				<div class="footer-youtube-wrap">
+					<a href="https://www.youtube.com/@hindimid.mbvmschoolmoongth834/" target="_blank" rel="noopener" class="footer-youtube-btn" aria-label="Visit MBVM YouTube Channel">
+						<i class="fa fa-youtube-play"></i>
+						<span>YouTube</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+    <script src="frontend/js/libs.js"></script>
+    <script src="frontend/js/contact-actions.js"></script>
+</body>
+
+</html>
+

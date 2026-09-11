@@ -1,0 +1,103 @@
+CREATE TABLE IF NOT EXISTS contact_enquiries (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(180) NOT NULL,
+  subject VARCHAR(180) NOT NULL,
+  message TEXT NOT NULL,
+  ip_address VARCHAR(45) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS admission_enquiries (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  fullname VARCHAR(160) NOT NULL,
+  nationality VARCHAR(80) NOT NULL,
+  id_card VARCHAR(255) NOT NULL,
+  dob DATE NOT NULL,
+  class_name VARCHAR(40) NOT NULL,
+  session_year VARCHAR(40) NOT NULL,
+  father_name VARCHAR(160) NOT NULL,
+  father_mobile VARCHAR(30) NOT NULL,
+  mother_name VARCHAR(160) NOT NULL,
+  mother_mobile VARCHAR(30) NOT NULL,
+  email VARCHAR(180) NOT NULL,
+  ip_address VARCHAR(45) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS student_results (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  student_name VARCHAR(160) NOT NULL,
+  registration_no VARCHAR(80) NOT NULL,
+  class_name VARCHAR(40) NOT NULL,
+  session_year VARCHAR(40) NOT NULL,
+  roll_no VARCHAR(40) NULL,
+  total_marks DECIMAL(7,2) NOT NULL,
+  obtained_marks DECIMAL(7,2) NOT NULL,
+  percentage DECIMAL(5,2) NOT NULL,
+  grade VARCHAR(20) NOT NULL,
+  status VARCHAR(30) NOT NULL DEFAULT 'Pass',
+  remarks TEXT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY unique_student_result (registration_no, class_name, session_year)
+);
+
+CREATE TABLE IF NOT EXISTS school_events (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(180) NOT NULL,
+  event_date DATE NOT NULL,
+  event_time VARCHAR(30) NULL,
+  description TEXT NOT NULL,
+  youtube_url VARCHAR(255) NULL,
+  image_path VARCHAR(255) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS gallery_items (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(180) NULL,
+  category VARCHAR(80) NULL,
+  image_path VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS teacher_profiles (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(160) NOT NULL,
+  designation VARCHAR(120) NOT NULL,
+  subject VARCHAR(120) NULL,
+  qualification VARCHAR(160) NULL,
+  bio TEXT NULL,
+  photo_path VARCHAR(255) NULL,
+  sort_order INT NOT NULL DEFAULT 0,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO teacher_profiles (name, designation, subject, qualification, bio, photo_path, sort_order)
+SELECT 'Teacher', 'Teacher', 'General Studies', '', 
+'Dedicated faculty supporting students with discipline, care, and regular guidance.',
+ 'frontend/uploads/teacher/210x220-img-1.jpg', 10
+WHERE NOT EXISTS (SELECT 1 FROM teacher_profiles LIMIT 1);
+
+INSERT INTO teacher_profiles (name, designation, subject, qualification, bio, photo_path, sort_order)
+SELECT 'Teacher', 'Teacher', 'Hindi Medium', '', 
+'Dedicated faculty supporting students with discipline, care, and regular guidance.', 
+'frontend/uploads/teacher/210x220-img-2.jpg', 20
+WHERE (SELECT COUNT(*) FROM teacher_profiles) = 1;
+
+INSERT INTO teacher_profiles (name, designation, subject, qualification, bio, photo_path, sort_order)
+SELECT 'Teacher', 'Assistant', 'Primary Classes', '', 
+'Dedicated faculty supporting students with discipline, care, and regular guidance.',
+ 'frontend/uploads/teacher/210x220-img-3.jpg', 30
+WHERE (SELECT COUNT(*) FROM teacher_profiles) = 2;
+
+INSERT INTO student_results (student_name, registration_no, class_name, session_year, roll_no, total_marks, obtained_marks, percentage, grade, status, remarks)
+VALUES 
+('Aarav Sharma', 'REG-101', '1', '2025-2026', '101', 500.00, 460.00, 92.00, 'A+', 'Pass', 'Outstanding performance! Keeps distinction across all subject evaluations.'),
+('Priya Verma', 'REG-102', '5', '2025-2026', '102', 500.00, 410.00, 82.00, 'A', 'Pass', 'Good effort. Excellent grip in Mathematics and Science.'),
+('Rohan Kumar', 'REG-103', '10', '2025-2026', '103', 500.00, 320.00, 64.00, 'B', 'Pass', 'Satisfactory progress. Needs more practice in Hindi grammar.')
+ON DUPLICATE KEY UPDATE student_name = VALUES(student_name);
+

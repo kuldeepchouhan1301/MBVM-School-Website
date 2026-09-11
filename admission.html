@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>MBVM | Admission</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Admission Application - Madhusudan Bal Vidya Mandir Mungthala">
+	<meta name="keywords" content="MBVM, admission, school admission, Abu Road, Sirohi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="frontend/img/favicon.png">
+	<link rel="stylesheet" href="frontend/css/libs.css">
+	<link rel="stylesheet" href="frontend/css/modern.css">
+</head>
+
+<body>
+
+	<!-- Top Information Bar -->
+	<div class="top-bar">
+		<div class="header-container top-bar-inner">
+			<div class="top-bar-contact">
+				<a href="tel:+919982754110">
+					<i class="fa fa-phone"></i> +91 9982754110
+				</a>
+				<a href="mailto:mbvm.mungthala1@gmail.com">
+					<i class="fa fa-envelope-o"></i> mbvm.mungthala1@gmail.com
+				</a>
+			</div>
+			<div class="top-bar-links">
+				<a href="https://www.youtube.com/@hindimid.mbvmschoolmoongth834/" target="_blank" rel="noopener" title="YouTube">
+					<i class="fa fa-youtube-play"></i>
+				</a>
+				<div class="lang-dropdown">
+					<i class="fa fa-globe"></i> EN <i class="fa fa-angle-down" style="font-size: 0.75rem;"></i>
+				</div>
+				<a href="login.html" title="Admin Login">
+					<i class="fa fa-user"></i> Login
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navigation Header -->
+	<header class="main-header">
+		<div class="header-container main-header-inner">
+			<a href="index.html" class="brand-logo-wrap">
+				<img src="frontend/img/logo.png" alt="MBVM Logo">
+				<div>
+					<div class="brand-title">Madhusudan Bal Vidya Mandir</div>
+					<div class="brand-subtitle">Mungthala, Abu Road</div>
+				</div>
+			</a>
+
+			<nav class="main-nav" id="mainNav">
+				<a href="index.html">Home</a>
+				<a href="class.html">Classes</a>
+				<a href="teachers.php">Teachers</a>
+				<a href="events.php">Events</a>
+				<a href="gallery.php">Gallery</a>
+				<a href="results.php">Results</a>
+				<a href="faq.html">FAQ</a>
+				<a href="timeline.html">Timeline</a>
+				<a href="contact-us.html">Contact Us</a>
+				<a href="admission.html" class="btn-primary" style="margin-left: 0.5rem;">Apply Now</a>
+			</nav>
+
+			<button class="mobile-nav-toggle" id="navToggle" aria-label="Toggle navigation">
+				<i class="fa fa-bars" style="font-size: 1.25rem;"></i>
+			</button>
+		</div>
+	</header>
+
+	<!-- Page Header Banner -->
+	<section style="background: linear-gradient(135deg, var(--mbvm-blue) 0%, var(--mbvm-ink) 100%); color: #ffffff; padding: 3rem 0; text-align: center;">
+		<div class="container">
+			<h1 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem;">Student Admission</h1>
+			<p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">Fill in the application form below to register your child for the academic session.</p>
+		</div>
+	</section>
+
+	<!-- Admission Form Section -->
+	<section class="section">
+		<div class="container">
+			<div class="card" style="max-width: 680px; margin: 0 auto; padding: 2.5rem;">
+				<h2 style="font-size: 1.5rem; font-weight: 700; color: var(--mbvm-ink); margin-bottom: 0.5rem; text-align: center;">Online Admission Application</h2>
+				<p style="text-align: center; color: var(--mbvm-soft); margin-bottom: 2rem;">Please fill up all required student and parent information accurately.</p>
+
+				<form class="login-form" method="POST" action="backend/admission.php" enctype="multipart/form-data" data-ajax="true">
+					<input type="text" name="_honey" style="display:none">
+					<div class="form-response"></div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Full Name *</label>
+						<input type="text" name="fullname" class="login-input" required placeholder="Enter student's full name" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Nationality *</label>
+						<select name="nationality" class="select2" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem; background: #fff;">
+							<option value="">-- Select Nationality --</option>
+							<option value="Indian" selected>Indian</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label for="id_card" style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Upload Student ID / Aadhaar Card (Image/PDF) *</label>
+						<input type="file" id="id_card" name="id_card" accept="image/png, image/jpeg, image/webp, application/pdf" required style="width: 100%; padding: 0.5rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); background: #f8fafc;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Date of Birth *</label>
+						<input type="date" name="dob" class="login-input" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Class Seeking Admission *</label>
+						<select name="class" class="select2" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem; background: #fff;">
+							<option value="">-- Select Class --</option>
+							<option value="1">Class 1</option>
+							<option value="2">Class 2</option>
+							<option value="3">Class 3</option>
+							<option value="4">Class 4</option>
+							<option value="5">Class 5</option>
+							<option value="6">Class 6</option>
+							<option value="7">Class 7</option>
+							<option value="8">Class 8</option>
+							<option value="9">Class 9</option>
+							<option value="10">Class 10</option>
+						</select>
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Academic Session *</label>
+						<input type="text" name="session" class="login-input" required value="2026-2027" placeholder="e.g. 2026-2027" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Father's Name *</label>
+						<input type="text" name="fatherName" class="login-input" required placeholder="Father's full name" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Father's Mobile No. *</label>
+						<input type="tel" name="fatherNameNumber" class="login-input" required placeholder="10-digit mobile number" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Mother's Name *</label>
+						<input type="text" name="motherName" class="login-input" required placeholder="Mother's full name" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.25rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Mother's Mobile No. *</label>
+						<input type="tel" name="motherNameNumber" class="login-input" required placeholder="10-digit mobile number" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<div class="form-group" style="margin-bottom: 1.75rem;">
+						<label style="display: block; font-weight: 600; margin-bottom: 0.35rem; color: var(--mbvm-ink);">Parent Email Address *</label>
+						<input type="email" name="email" class="login-input" required placeholder="email@example.com" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--mbvm-border); border-radius: var(--mbvm-radius); font-size: 0.95rem;">
+					</div>
+
+					<button type="submit" class="btn-primary" style="width: 100%; padding: 0.9rem; font-size: 1.05rem; border: none; cursor: pointer; text-align: center; font-weight: 700;">Submit Admission Application</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+				<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-grid">
+				<!-- Brand & Contact Info Column -->
+				<div class="footer-col-brand">
+					<div class="footer-brand-header">
+						<div class="footer-logo-circle">
+							<img src="frontend/img/logo.png" alt="MBVM Logo">
+						</div>
+						<div class="footer-brand-title-wrap">
+							<div class="footer-brand-name">Madhusudan Bal Vidya Mandir</div>
+							<div class="footer-brand-sub">Mungthala, Abu Road</div>
+						</div>
+					</div>
+					<p class="footer-brand-desc">Established in 2004, MBVM is a Hindi-medium school offering quality education from Nursery to Class 10 in the rural area of Abu Road, Sirohi District, Rajasthan. We are committed to nurturing every child's potential with values, discipline, and academic excellence.</p>
+					<div class="footer-contact-list">
+						<a href="tel:+919982754110" class="footer-contact-item">
+							<i class="fa fa-phone"></i>
+							<span>+91 9982754110</span>
+						</a>
+						<a href="mailto:mbvm.mungthala1@gmail.com" class="footer-contact-item">
+							<i class="fa fa-envelope-o"></i>
+							<span>mbvm.mungthala1@gmail.com</span>
+						</a>
+						<div class="footer-contact-item">
+							<i class="fa fa-map-marker"></i>
+							<span>Mungthala Bus Stand, Abu Road, Rajasthan</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Help Links Column (2-Column Grid) -->
+				<div class="footer-col-links">
+					<h3 class="footer-heading">Help Links</h3>
+					<ul class="footer-links-grid">
+						<li><a href="faq.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> FAQ</a></li>
+						<li><a href="admission.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Admission</a></li>
+						<li><a href="results.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Results</a></li>
+						<li><a href="timeline.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Timeline</a></li>
+						<li><a href="gallery.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Gallery</a></li>
+						<li><a href="teachers.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Teachers</a></li>
+						<li><a href="events.php"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Events</a></li>
+						<li><a href="contact-us.html"><i class="fa fa-circle" style="font-size: 6px; vertical-align: middle;"></i> Contact Us</a></li>
+					</ul>
+				</div>
+
+				<!-- Key Achievement Column -->
+				<div class="footer-col-achievement">
+					<div class="footer-achievement-card">
+						<div class="footer-achievement-title">
+							<i class="fa fa-trophy"></i> Key Achievement
+						</div>
+						<div class="footer-achievement-desc">
+							50+ students secured JNV admission by 2025–26 — highest in the district
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bottom Footer Row -->
+			<div class="footer-bottom">
+				<div class="footer-copyright">
+					© 2026 Madhusudan Bal Vidya Mandir Mungthala. All rights reserved.
+				</div>
+				<div class="footer-maintained">
+					Maintained by <a href="https://www.linkedin.com/in/kuldeepchouhan1301/" target="_blank" rel="noopener">Kuldeep Chouhan</a>
+				</div>
+				<div class="footer-youtube-wrap">
+					<a href="https://www.youtube.com/@hindimid.mbvmschoolmoongth834/" target="_blank" rel="noopener" class="footer-youtube-btn" aria-label="Visit MBVM YouTube Channel">
+						<i class="fa fa-youtube-play"></i>
+						<span>YouTube</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="frontend/js/libs.js"></script>
+	<script src="frontend/js/contact-actions.js"></script>
+</body>
+
+</html>
